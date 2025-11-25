@@ -1,3 +1,5 @@
+import card1Img from '../assets/images/card1_img1.png';
+
 function Card4({mode}) {
 
     function callouts(){
@@ -28,7 +30,7 @@ function Card4({mode}) {
                     </span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">Here’s Why That Matters</h2>
-                <img src="src/assets/images/card1_img1.png" alt="" className="mb-4"/>
+                <img src={card1Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     Hydration is a fat-burning multiplier. Without enough water, 
                     your body holds onto toxins, slows digestion, and burns fat less efficiently.

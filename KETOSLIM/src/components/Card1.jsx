@@ -1,3 +1,5 @@
+import card1Img from '../assets/images/card1_img1.png';
+
 function Card1() {
 
     function callouts(){
@@ -24,7 +26,7 @@ function Card1() {
                     </span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">Here’s Why That Matters</h2>
-                <img src="src/assets/images/card1_img1.png" alt="" className="mb-4"/>
+                <img src={card1Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     Your body fat percentage gives a clearer picture than BMI alone. 
                     It tells us how much of your body is lean mass (muscle, organs, bone) vs stored fat.

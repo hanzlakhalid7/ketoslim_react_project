@@ -1,6 +1,18 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import logoImg from '../assets/images/logo.png';
+import salesBg from '../assets/images/sales.png';
+import sales1 from '../assets/images/sales1.webp';
+import sales3 from '../assets/images/sales3.webp';
+import ketoFood from '../assets/images/keto-food.webp';
+import cartImg from '../assets/images/cart.webp';
+import heartPot from '../assets/images/heart-pot.webp';
+import educationIcon from '../assets/images/education-icon.webp';
+import iphoneMock from '../assets/images/iphone-mockup.webp';
+import pubmedLogo from '../assets/images/pubmed-logo.svg';
+import mayoClinic from '../assets/images/mayo-clinic-b.webp';
+import guarantee60 from '../assets/images/60-day-guarantee.webp';
 import DiscountTimer from "./DiscountTimer";
 
 function Sales() {
@@ -32,7 +44,7 @@ function Sales() {
 
         <ThemeToggle mode={mode} setMode={setMode} />
 
-        <img src="src/assets/images/logo.png" className="h-10" alt="" />
+        <img src={logoImg} className="h-10" alt="" />
         <div className="w-full max-w-xl">
           <div className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? 'bg-white text-black' : 'dMB text-white'}`}>
           <div className="flex flex-col items-center">
@@ -43,9 +55,9 @@ function Sales() {
                 </h1>
 
                 <div className="flex items-center justify-center gap-18 mt-4 mb-2">
-                  <img src="src/assets/images/sales.png" className="absolute h-[250px] w-[250px] blur-sm opacity-70" alt=""/>
-                  <img src="src/assets/images/sales1.webp" className="relative w-[180px] h-[250px]" alt=""/>
-                  <img src="src/assets/images/sales3.webp" className="relative w-[180px] h-[250px]" alt=""/>
+                  <img src={salesBg} className="absolute h-[250px] w-[250px] blur-sm opacity-70" alt=""/>
+                  <img src={sales1} className="relative w-[180px] h-[250px]" alt=""/>
+                  <img src={sales3} className="relative w-[180px] h-[250px]" alt=""/>
                 </div>
 
                 <div className="flex items-center justify-center w-full py-4 mt-2 mb-4 font-bold shadow-md">
@@ -136,24 +148,24 @@ function Sales() {
               <div className="mt-6 flex flex-row items-center justify-between w-full">
                 <div className="flex flex-col gap-4 flex-1 max-w-xs">
                   <div className="flex items-center gap-3">
-                    <img src="src/assets/images/keto-food.webp" alt="" className="w-8 h-8"/>
+                    <img src={ketoFood} alt="" className="w-8 h-8"/>
                     <span className="font-medium text-sm text-red-500">Daily Custom Meal Plan</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img src="src/assets/images/cart.webp" alt="" className="w-8 h-8"/>
+                    <img src={cartImg} alt="" className="w-8 h-8"/>
                     <span className="font-medium text-sm text-red-500">Done-For-You Grocery Lists</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img src="src/assets/images/heart-pot.webp" alt="" className="w-8 h-8"/>
+                    <img src={heartPot} alt="" className="w-8 h-8"/>
                     <span className="font-medium text-sm text-red-500">Overwhelm-Free Delicious Recipes</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img src="src/assets/images/education-icon.webp" alt="" className="w-8 h-8"/>
+                    <img src={educationIcon} alt="" className="w-8 h-8"/>
                     <span className="font-medium text-sm text-red-500">Weekly Tips & Guidance</span>
                   </div>
                 </div>
                 <div className="flex-1 flex justify-end items-center">
-                  <img src="src/assets/images/iphone-mockup.webp" alt="" className="h-80 w-auto max-h-[300px] drop-shadow-2xl"/>
+                  <img src={iphoneMock} alt="" className="h-80 w-auto max-h-[300px] drop-shadow-2xl"/>
                 </div>
               </div>
 
@@ -165,7 +177,7 @@ function Sales() {
                 <div className="">
                 <div className="flex flex-col items-start gap-2">
                   <div className="flex justify-center items-center gap-2 mb-1 w-full">
-                    <img src="src/assets/images/pubmed-logo.svg" alt="" className="h-14 w-auto" />
+                    <img src={pubmedLogo} alt="" className="h-14 w-auto" />
                   </div>
                   <p className="text-base">There is evidence to suggest that a Ketogenic Diet can help with weight loss, 
                     visceral adiposity, and appetite control.</p>
@@ -176,7 +188,7 @@ function Sales() {
               <div className="">
                 <div className="flex flex-col items-start gap-2">
                   <div className="flex justify-center items-center gap-2 mb-1 w-full">
-                    <img src="src/assets/images/mayo-clinic-b.webp" className="h-14 w-auto" alt="" />
+                    <img src={mayoClinic} className="h-14 w-auto" alt="" />
                   </div>
                   <p className="text-base">Research shows that a keto diet can result in weight loss and improvements
                      in cardiovascular risk factors.</p>
@@ -274,7 +286,7 @@ function Sales() {
         <div className="w-full max-w-xl flex flex-col gap-2 mt-8 px-2">
           <div className="flex items-center gap-4 mb-2">
             <h3 className="font-bold text-4xl sm:text-5xl flex-1">Money Back Guarantee</h3>
-            <img src="src/assets/images/60-day-guarantee.webp" alt="" className="h-26 w-26" />
+            <img src={guarantee60} alt="" className="h-26 w-26" />
           </div>
           <p className="text-base mb-1">We are confident with our service quality and its results. 
             So, if you are ready to reach your goals, it’s a risk-free offer.</p>

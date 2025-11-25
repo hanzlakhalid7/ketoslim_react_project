@@ -1,6 +1,7 @@
 import { useState,useEffect,useCallback} from "react";
 import "./ThemeToggle.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
+import logoImg from '../assets/images/logo.png';
 import { useNavigate } from "react-router-dom";
 function Home() {
   const navigate = useNavigate()
@@ -131,7 +132,7 @@ function Home() {
           <ThemeToggle mode={mode} setMode={setMode} ></ThemeToggle>
 
           <div>
-            <img src="src/assets/images/logo.png" className="h-10" alt="" />
+            <img src={logoImg} className="h-10" alt="" />
           </div>
 
           <div className="flex text-[34px] leading-[1.2em] font-semibold gap-2">

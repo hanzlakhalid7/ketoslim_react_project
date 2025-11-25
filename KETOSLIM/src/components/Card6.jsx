@@ -1,3 +1,5 @@
+import card6Img from '../assets/images/card6_img6.png';
+
 function Card6() {
 
     function callouts(){
@@ -15,7 +17,7 @@ function Card6() {
                     </span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">Here’s Why That Matters</h2>
-                <img src="src/assets/images/card6_img6.png" alt="" className="mb-4"/>
+                <img src={card6Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     Visible change doesn’t take forever — when your metabolism shifts, 
                     your body can start dropping bloat, water weight, and fat surprisingly fast.

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import logoImg from '../assets/images/logo.png';
 import Card1 from "./Card1";
 import Card2 from "./Card2";
 import Card3 from "./Card3";
@@ -59,7 +60,7 @@ function Card() {
 
         <ThemeToggle mode={mode} setMode={setMode} />
 
-        <img src="src/assets/images/logo.png" className="h-10" alt="" />
+        <img src={logoImg} className="h-10" alt="" />
 
         <div className="w-full max-w-xl flex items-center justify-between py-2 px-4 mb-4">
           

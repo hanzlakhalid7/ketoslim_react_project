@@ -1,3 +1,5 @@
+import card2Img from '../assets/images/card2_img2.png';
+
 function Card2({mode}) {
 
     function callouts(){
@@ -21,7 +23,7 @@ function Card2({mode}) {
                     <span> {localStorage.getItem("bmi")}</span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">What That Means</h2>
-                <img src="src/assets/images/card2_img2.png" alt="" className="mb-4"/>
+                <img src={card2Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     BMI (Body Mass Index) is a quick way to estimate how your weight 
                     might affect your health based on your height and weight.

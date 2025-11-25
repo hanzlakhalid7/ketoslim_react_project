@@ -1,3 +1,5 @@
+import card5Img from '../assets/images/card5_img5.png';
+
 function Card5({mode}) {
 
     function callouts(){
@@ -14,7 +16,7 @@ function Card5({mode}) {
                     </span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">With the Right Fuel Source</h2>
-                <img src="src/assets/images/card5_img5.png" alt="" className="mb-4"/>
+                <img src={card5Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     This is your potential, what your body could lose if it’s in fat-burning mode. 
                     But that depends on getting your metabolism working with you, not against you.

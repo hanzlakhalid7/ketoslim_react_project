@@ -1,3 +1,5 @@
+import card3Img from '../assets/images/card3_img3.png';
+
 function Card3({mode}) {
 
     function callouts(){
@@ -25,7 +27,7 @@ function Card3({mode}) {
                     </span>
                 </h1>
                 <h2 className="text-[20px] mb-2 font-semibold">But Not All Calories Are Equal</h2>
-                <img src="src/assets/images/card3_img3.png" alt="" className="mb-4"/>
+                <img src={card3Img} alt="" className="mb-4"/>
                 <p className="text-[20px] font-normal mb-2">
                     Your body burns calories just to stay alive — that’s your BMR. Add in movement, 
                     and you burn even more. Eat less than you burn? You lose weight. Eat more? 
