@@ -34,7 +34,7 @@ function Sales() {
 
         <img src="src/assets/images/logo.png" className="h-10" alt="" />
         <div className="w-full max-w-xl">
-          <div className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? ' bg-white text-black`':' dMB text-white'}`}>
+          <div className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? 'bg-white text-black' : 'dMB text-white'}`}>
           <div className="flex flex-col items-center">
           <span className="text-[34px]">🎯</span>
                 <h1 className="text-[34px] text-center leading-[1.2em] font-semibold mb-1">Your Personalized
@@ -191,11 +191,6 @@ function Sales() {
 
 
                   <DiscountTimer/>
-
-                  {/* <div className="flex items-center justify-between rounded-lg px-4 py-2 mb-4 bg-orange-500">
-                    <span className="text-white font-medium text-base">Discount expires in</span>
-                    <span className="text-white font-bold text-lg flex items-center gap-1">0:00</span>
-                  </div> */}
 
                 </div>
 

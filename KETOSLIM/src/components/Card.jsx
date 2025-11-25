@@ -37,13 +37,18 @@ function Card() {
   }
 
   function dots(){
-    let i =1;
+    let i = 1;
     let dotArray = [];
-    while(i<=6){
-      dotArray.push(<div className={`rounded-full w-2 h-2 ${step >= i ? 'rangeColor':'bg-gray-400'}`}></div>);
-    i++;
-  }
-  return dotArray;
+    while(i <= 6){
+      dotArray.push(
+        <div
+          key={i}
+          className={`rounded-full w-2 h-2 ${step >= i ? 'rangeColor' : 'bg-gray-400'}`}
+        />
+      );
+      i++;
+    }
+    return dotArray;
   }
 
   const btnArray = ["Body Fat %","BMI","Caloric Intake","Hydration","Weight Rate"];
@@ -70,7 +75,7 @@ function Card() {
 
 
         <div className="w-full max-w-xl">
-          <div className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? ' bg-white text-black`':' dMB text-white'}`}>
+            <div className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? 'bg-white text-black' : 'dMB text-white'}`}>
 
             {cards[step - 1]}
 
@@ -82,7 +87,7 @@ function Card() {
           <div className="w-full justify-start mr-4">
             
             {step>1 && <button
-              onClick={() => setStep(prev => Math.min(prev - 1, 7))}
+              onClick={() => setStep(prev => Math.max(prev - 1, 1))}
               className={`cursor-pointer border-2 textColor text-lg py-2 font-bold w-full rounded-lg flex items-center justify-center ${mode ? 'dMB' : 'bg-white' }`}>
               <span>{btnArray[step-2]}</span>
             </button>

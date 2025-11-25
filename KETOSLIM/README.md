@@ -14,3 +14,17 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Deployment notes
+
+- This project uses HashRouter for client-side routing so the app works on static hosts without server-side rewrite rules. URLs will appear like `/#/Result` when navigating in the browser.
+
+## Smoke test (CI / local)
+
+There's a small smoke-test script that builds the site and verifies the preview server starts. Run it locally with:
+
+```powershell
+npm run smoke-test
+```
+
+This check is a quick verification for your pipeline that the build succeeded and a preview server starts correctly.

@@ -50,7 +50,6 @@ function Home() {
 
   function gender(e){
     setGenderValue(e.target.value);
-    console.log(e.target.value);
   }
 
   function fatScale(e){
@@ -126,7 +125,7 @@ function Home() {
   }
 
   return(
-    <div className={` ${!mode ? ' bg-pink-50 text-black`':'bg-black'} `}>
+    <div className={`${!mode ? 'bg-pink-50 text-black' : 'bg-black'}`}>
         <div className="flex flex-col items-center min-h-screen px-4 py-6"> 
 
           <ThemeToggle mode={mode} setMode={setMode} ></ThemeToggle>
@@ -141,7 +140,7 @@ function Home() {
           </div>
 
         <div className="w-full max-w-xl">
-          <div className={`flex flex-col shadow mt-7 p-8 w-full rounded-2xl ${!mode ? ' bg-white text-black`':' dMB text-white'}`}>
+          <div className={`flex flex-col shadow mt-7 p-8 w-full rounded-2xl ${!mode ? 'bg-white text-black' : 'dMB text-white'}`}>
             <form onSubmit={handler}>
 
             <div className="">
