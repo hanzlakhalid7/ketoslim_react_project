@@ -1,0 +1,29 @@
+import { useState } from 'react';
+
+function ThemeToggle({ mode, setMode }) {
+    const [modeClass, setModeClass] = useState("Dark Mode");
+    function ChangeModeClass(){
+    if(modeClass==="Dark Mode"){
+      setModeClass("Light Mode"); 
+      setMode(!mode); 
+      localStorage.setItem("mode",mode);
+
+    }
+    else{
+      setModeClass("Dark Mode");
+      setMode(!mode);
+      localStorage.setItem("mode",mode);
+
+    } 
+  }
+  return (
+    <div className="w-full flex justify-end mb-8">
+            <button 
+            onClick={ChangeModeClass} value={modeClass} className={`fixed border-2 rounded-1xl font-semibold borderb rounded-xl py-2 px-4 cursor-pointer ${!mode ? ' bg-white text-black`':' dMB text-white'}`}>
+            {modeClass}
+            </button>
+    </div>
+  );
+}
+
+export default ThemeToggle;
