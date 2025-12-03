@@ -52,7 +52,7 @@ export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2
 
         <div className="flex items-center justify-center gap-2 mt-8 mb-4 text-center"><span className="text-xs font-medium">✅ Risk-Free: Backed by 60-Day Money-Back Guarantee</span></div>
 
-        <button className="font-bold py-3 px-8 rounded-lg flex items-center justify-center transition w-full relative pointer-events-auto shadow-lg cursor-pointer rangeColor" onClick={() => alert('Thank you for continuing with the 1 Payment option!')}><span className="mx-auto text-white">Continue</span></button>
+        <button className=" font-bold py-3 px-8 rounded-lg flex items-center justify-center transition w-full pointer-events-auto shadow-lg cursor-pointer rangeColor" onClick={() =>{ if(trans){alert('Thank you for continuing with the 1 Payment option!')} else {alert('Thank you for continuing with the 2 Payment option!')} }}><span className="mx-auto text-white">Continue</span></button>
         <div className="w-full text-center"><button className="underline text-base font-medium mt-2 cursor-pointer" onClick={() => navigate('/')}>No Thanks, I don’t want my plan.</button></div>
       </div>
     </div>
