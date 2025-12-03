@@ -1,8 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { NavigateFunction } from 'react-router-dom';
 import DiscountTimer from '../DiscountTimer';
 
-export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2, navigate }) {
+interface PricingBlockProps {
+  mode: boolean;
+  trans: boolean;
+  trans2: boolean;
+  onSelect1: () => void;
+  onSelect2: () => void;
+  navigate: NavigateFunction;
+}
+
+export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2, navigate }: PricingBlockProps) {
   return (
     <div className="w-full">
       <div className="w-full mt-7">
@@ -17,7 +25,7 @@ export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2
         >
           <div>
             <div className="font-bold text-base mb-1">3 PAYMENTS OF $29</div>
-            <div className="text-sm leading-tight">Just $29 today. Split the rest<br/>over 2 easy payments.</div>
+            <div className="text-sm leading-tight">Just $29 today. Split the rest<br />over 2 easy payments.</div>
           </div>
           <span className="ml-4 flex items-center justify-center"><span className={`w-8 h-8 border-2 rounded-full flex items-center justify-center pb-1 ${!trans ? ' border-gray-300 bg-white' : 'rangeColor borderNext'}`}>✔</span></span>
         </div>
@@ -29,7 +37,7 @@ export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2
           <div className="flex justify-between items-start">
             <div className="p-4">
               <div className="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-md inline-block mb-1">DISCOUNT</div>
-              <div className="text-sm mb-1">1 Payment of $67. Pay in full<br/>today and save $20 instantly.</div>
+              <div className="text-sm mb-1">1 Payment of $67. Pay in full<br />today and save $20 instantly.</div>
             </div>
 
             <div className="flex flex-col items-end">
@@ -50,21 +58,3 @@ export default function PricingBlock({ mode, trans, trans2, onSelect1, onSelect2
     </div>
   );
 }
-
-PricingBlock.propTypes = {
-  mode: PropTypes.bool,
-  trans: PropTypes.bool,
-  trans2: PropTypes.bool,
-  onSelect1: PropTypes.func,
-  onSelect2: PropTypes.func,
-  navigate: PropTypes.func,
-};
-
-PricingBlock.defaultProps = {
-  mode: false,
-  trans: false,
-  trans2: false,
-  onSelect1: () => {},
-  onSelect2: () => {},
-  navigate: () => {},
-};

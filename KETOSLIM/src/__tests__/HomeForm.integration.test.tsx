@@ -1,5 +1,5 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
@@ -22,12 +22,11 @@ describe('HomeForm integration', () => {
 
     // select gender radio
     const maleInput = document.querySelector('input[name="gender"][value="male"]');
-    await user.click(maleInput);
+    await user.click(maleInput!);
 
     // set two range sliders (first is Body Fat, second is BMI)
     const sliders = screen.getAllByRole('slider');
     // range inputs are best updated with fireEvent.change
-    const { fireEvent } = require('@testing-library/react');
     fireEvent.change(sliders[0], { target: { value: '25' } });
     fireEvent.change(sliders[1], { target: { value: '25' } });
 

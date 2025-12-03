@@ -73,11 +73,11 @@ function HomeForm() {
         <form onSubmit={handler}>
           <GenderField value={genderValue} onChange={setGenderValue} />
 
-          <RangeField label="Body Fat %" min={min} max={max} value={fatScaleValue} onChange={setFatScaleValue} />
+          <RangeField label="Body Fat %" min={min} max={max} value={fatScaleValue} onChange={(val) => setFatScaleValue(Number(val))} />
 
-          <RangeField label="BMI" min={min} max={bmiMax} value={bmiValue} onChange={setBmiValue} />
+          <RangeField label="BMI" min={min} max={bmiMax} value={bmiValue} onChange={(val) => setBmiValue(Number(val))} />
 
-          <NumberField label="Daily Calorie Target" min={1} value={calorieValue} onChange={(v) => { if (v < 0) { setErrorMessageCalories('Value cannot be negative.'); setCalorieValue(''); } else { setCalorieValue(v); setErrorMessageCalories(''); } }} error={errorMessageCalories} placeholder="e.g. 2000" />
+          <NumberField label="Daily Calorie Target" min={1} value={calorieValue} onChange={(v) => { if (Number(v) < 0) { setErrorMessageCalories('Value cannot be negative.'); setCalorieValue(''); } else { setCalorieValue(v); setErrorMessageCalories(''); } }} error={errorMessageCalories} placeholder="e.g. 2000" />
 
           <div className="mb-4">
             <div className="mb-1">
@@ -93,9 +93,9 @@ function HomeForm() {
             </select>
           </div>
 
-          <NumberField label="Weekly Weight Loss Goal (lbs)" min={0.1} step={0.1} value={weightLossValue} onChange={(v) => { if (v < 0) { seterrorMessageWeight('Value cannot be negative.'); setWeightLossValue(''); } else { setWeightLossValue(v); seterrorMessageWeight(''); } }} error={errorMessageWeight} placeholder="e.g. 1.5" />
+          <NumberField label="Weekly Weight Loss Goal (lbs)" min={0.1} step={0.1} value={weightLossValue} onChange={(v) => { if (Number(v) < 0) { seterrorMessageWeight('Value cannot be negative.'); setWeightLossValue(''); } else { setWeightLossValue(v); seterrorMessageWeight(''); } }} error={errorMessageWeight} placeholder="e.g. 1.5" />
 
-          <NumberField label="Days to See Results" min={1} value={daysValue} onChange={(v) => { if (v < 0) { seterrorMessageDays('Value cannot be negative.'); setDaysValue(''); } else { setDaysValue(v); seterrorMessageDays(''); } }} error={errorMessageDays} placeholder="e.g. 30" />
+          <NumberField label="Days to See Results" min={1} value={daysValue} onChange={(v) => { if (Number(v) < 0) { seterrorMessageDays('Value cannot be negative.'); setDaysValue(''); } else { setDaysValue(v); seterrorMessageDays(''); } }} error={errorMessageDays} placeholder="e.g. 30" />
 
           <button type="submit" disabled={!isCompleted} className={`w-full rounded-xl mt-4 py-3 text-lg font-semibold mb-6 rangeColor border-rangeColor ${isCompleted ? 'opacity-100 cursor-pointer' : ' opacity-50 cursor-not-allowed'}`}>
             See My Results

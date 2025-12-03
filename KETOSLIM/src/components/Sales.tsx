@@ -13,7 +13,7 @@ import iphoneMock from '../assets/images/iphone-mockup.webp';
 import pubmedLogo from '../assets/images/pubmed-logo.svg';
 import mayoClinic from '../assets/images/mayo-clinic-b.webp';
 import guarantee60 from '../assets/images/60-day-guarantee.webp';
-import DiscountTimer from './DiscountTimer';
+
 import SalesHero from './sales/SalesHero';
 import StatsFeatures from './sales/StatsFeatures';
 import Benefits from './sales/Benefits';
@@ -46,9 +46,8 @@ function Sales() {
 
         <div className="w-full max-w-xl">
           <div
-            className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${
-              !mode ? 'bg-white text-black' : 'dMB text-white'
-            }`}
+            className={`flex flex-col p-8 w-full mb-6 rounded-2xl shadow-xl ${!mode ? 'bg-white text-black' : 'dMB text-white'
+              }`}
           >
             <SalesHero salesBg={salesBg} sales1={sales1} sales3={sales3} />
             <StatsFeatures />

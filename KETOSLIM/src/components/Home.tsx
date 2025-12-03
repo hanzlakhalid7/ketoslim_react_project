@@ -5,7 +5,7 @@ import HomeForm from './HomeForm';
 import { ParameterContext } from './ParameterContext';
 
 function Home() {
-  const { mode, setMode } = useContext(ParameterContext);
+  const { mode } = useContext(ParameterContext);
 
   return (
     <div className={`${!mode ? 'bg-pink-50 text-black' : 'bg-black text-white'}`}>

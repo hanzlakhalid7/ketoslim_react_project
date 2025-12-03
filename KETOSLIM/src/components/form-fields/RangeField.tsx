@@ -1,7 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface RangeFieldProps {
+  label: string;
+  min: number;
+  max: number;
+  value: number | string;
+  onChange: (value: string) => void;
+}
 
-export default function RangeField({ label, min, max, value, onChange }) {
+export default function RangeField({ label, min, max, value, onChange }: RangeFieldProps) {
   return (
     <div className="flex flex-col">
       <div className="mb-1">
@@ -15,15 +20,3 @@ export default function RangeField({ label, min, max, value, onChange }) {
     </div>
   );
 }
-
-RangeField.propTypes = {
-  label: PropTypes.string.isRequired,
-  min: PropTypes.number.isRequired,
-  max: PropTypes.number.isRequired,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  onChange: PropTypes.func.isRequired,
-};
-
-RangeField.defaultProps = {
-  value: 0,
-};

@@ -1,7 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface StatBlockProps {
+  heading: string;
+  value: string;
+  color?: string;
+  barPct?: number;
+}
 
-function StatBlock({ heading, value, color = 'text-red-500', barPct }) {
+function StatBlock({ heading, value, color = 'text-red-500', barPct }: StatBlockProps) {
   return (
     <div>
       <div className="text-[14px]">{heading}</div>
@@ -14,18 +18,6 @@ function StatBlock({ heading, value, color = 'text-red-500', barPct }) {
     </div>
   );
 }
-
-StatBlock.propTypes = {
-  heading: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  barPct: PropTypes.number,
-};
-
-StatBlock.defaultProps = {
-  color: 'text-red-500',
-  barPct: undefined,
-};
 
 export default function StatsFeatures() {
   return (
@@ -53,7 +45,7 @@ export default function StatsFeatures() {
       </div>
 
       <div className="pr-2 flex flex-col w-1/2 gap-5">
-        <StatBlock heading="Body Fat" value="10-12%" color="textColor"/>
+        <StatBlock heading="Body Fat" value="10-12%" color="textColor" />
         <div>
           <div className="text-[14px] mb-1">Energy Levels</div>
           <div className="w-full h-2 rounded-2xl bg-gray-400">

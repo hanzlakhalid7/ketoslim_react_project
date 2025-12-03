@@ -1,7 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface GenderFieldProps {
+  value: string;
+  onChange: (value: string) => void;
+}
 
-export default function GenderField({ value, onChange }) {
+export default function GenderField({ value, onChange }: GenderFieldProps) {
   return (
     <div className="mb-4">
       <div className="mb-1">
@@ -21,12 +23,3 @@ export default function GenderField({ value, onChange }) {
     </div>
   );
 }
-
-GenderField.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-};
-
-GenderField.defaultProps = {
-  value: '',
-};

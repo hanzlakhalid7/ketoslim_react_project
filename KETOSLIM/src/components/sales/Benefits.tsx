@@ -1,7 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface BenefitsProps {
+  ketoFood?: string;
+  cartImg?: string;
+  heartPot?: string;
+  educationIcon?: string;
+  iphoneMock?: string;
+}
 
-export default function Benefits({ ketoFood, cartImg, heartPot, educationIcon, iphoneMock }) {
+export default function Benefits({ ketoFood, cartImg, heartPot, educationIcon, iphoneMock }: BenefitsProps) {
   return (
     <div className="mt-6 flex flex-row items-center justify-between w-full">
       <div className="flex flex-col gap-4 flex-1 max-w-xs">
@@ -29,19 +34,3 @@ export default function Benefits({ ketoFood, cartImg, heartPot, educationIcon, i
     </div>
   );
 }
-
-Benefits.propTypes = {
-  ketoFood: PropTypes.string,
-  cartImg: PropTypes.string,
-  heartPot: PropTypes.string,
-  educationIcon: PropTypes.string,
-  iphoneMock: PropTypes.string,
-};
-
-Benefits.defaultProps = {
-  ketoFood: '',
-  cartImg: '',
-  heartPot: '',
-  educationIcon: '',
-  iphoneMock: '',
-};

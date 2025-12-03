@@ -1,6 +1,15 @@
-import PropTypes from 'prop-types';
+import { ReactNode } from 'react';
 
-function CardStep({ icon, title, subtitle, image, description, callouts }) {
+interface CardStepProps {
+  icon?: ReactNode;
+  title: ReactNode;
+  subtitle?: string;
+  image?: string;
+  description?: string;
+  callouts?: () => string;
+}
+
+function CardStep({ icon, title, subtitle, image, description, callouts }: CardStepProps) {
   return (
     <div className="flex flex-col items-center">
       <span className="text-[34px]">{icon}</span>
@@ -14,20 +23,3 @@ function CardStep({ icon, title, subtitle, image, description, callouts }) {
 }
 
 export default CardStep;
-
-CardStep.propTypes = {
-  icon: PropTypes.node,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string,
-  image: PropTypes.string,
-  description: PropTypes.string,
-  callouts: PropTypes.func,
-};
-
-CardStep.defaultProps = {
-  icon: null,
-  subtitle: undefined,
-  image: undefined,
-  description: undefined,
-  callouts: undefined,
-};

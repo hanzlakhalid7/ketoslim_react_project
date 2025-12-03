@@ -3,11 +3,11 @@ import { useState } from 'react';
 import Home from './components/Home';
 import Card from './components/Card';
 import Sales from './components/Sales';
-import { ParameterContext } from './components/ParameterContext';
+import { ParameterContext, FormData } from './components/ParameterContext';
 
 function AppRoutes() {
-  const [formData, setFormData] = useState({});
-  
+  const [formData, setFormData] = useState<Partial<FormData>>({});
+
   const [mode, setMode] = useState(() => {
     try {
       return localStorage.getItem('mode') === 'true';

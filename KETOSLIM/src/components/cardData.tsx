@@ -8,7 +8,7 @@ import card4Img from '../assets/images/card4_img4.png';
 import card5Img from '../assets/images/card5_img5.png';
 import card6Img from '../assets/images/card6_img6.png';
 
-function cardData() {
+function cardData(): any[] {
   const { formData } = useContext(ParameterContext);
   return [
     {

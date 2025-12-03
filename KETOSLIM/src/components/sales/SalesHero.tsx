@@ -1,7 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface SalesHeroProps {
+  salesBg?: string;
+  sales1?: string;
+  sales3?: string;
+}
 
-export default function SalesHero({ salesBg, sales1, sales3 }) {
+export default function SalesHero({ salesBg, sales1, sales3 }: SalesHeroProps) {
   return (
     <div className="flex flex-col items-center">
       <span className="text-[34px]">🎯</span>
@@ -24,15 +27,3 @@ export default function SalesHero({ salesBg, sales1, sales3 }) {
     </div>
   );
 }
-
-SalesHero.propTypes = {
-  salesBg: PropTypes.string,
-  sales1: PropTypes.string,
-  sales3: PropTypes.string,
-};
-
-SalesHero.defaultProps = {
-  salesBg: '',
-  sales1: '',
-  sales3: '',
-};

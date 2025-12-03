@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+interface GuaranteeProps {
+  guarantee60?: string;
+}
 
-export default function Guarantee({ guarantee60 }) {
+export default function Guarantee({ guarantee60 }: GuaranteeProps) {
   return (
     <div className="w-full max-w-xl flex flex-col gap-2 mt-8 px-2">
       <div className="flex items-center gap-4 mb-2">
@@ -24,11 +25,3 @@ export default function Guarantee({ guarantee60 }) {
     </div>
   );
 }
-
-Guarantee.propTypes = {
-  guarantee60: PropTypes.string,
-};
-
-Guarantee.defaultProps = {
-  guarantee60: '',
-};
